@@ -1,7 +1,7 @@
 ﻿using System;
 using tabuleiro;
 
-namespace Xadrez
+namespace Program
 {
     class Tela
     {
