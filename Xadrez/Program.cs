@@ -7,21 +7,11 @@ namespace Program{
     {
         static void Main(string[] args)
         {
-            try{
-                Tabuleiro tab = new Tabuleiro(7, 7);
 
-                tab.colorcarPeca(new Torre(tab, Cor.Preta), new Posicao(0, 0));
-                
-                tab.colorcarPeca(new Torre(tab, Cor.Preta), new Posicao(1, 9));
-                tab.colorcarPeca(new Rei(tab, Cor.Preta), new Posicao(0, 2));
+            PosicaoXadrez pos = new PosicaoXadrez('c', 7);
+            Console.WriteLine(pos);
 
-                Tela.imprimirTabuleiro(tab);
-            }
-            catch (TabuleiroException e)
-            {
-                Console.WriteLine(e.Message);
-            }
-          
+            Console.WriteLine(pos.toPosicao());
 
             Console.ReadLine();
         }
