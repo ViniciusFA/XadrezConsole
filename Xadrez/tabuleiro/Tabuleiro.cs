@@ -13,7 +13,7 @@ namespace tabuleiro
         {
             this.linhas = linhas;
             this.colunas = colunas;
-            this.pecas = new Peca[linhas, colunas];            
+            this.pecas = new Peca[linhas, colunas];
         }
 
         public Peca peca(int linha, int coluna)
@@ -26,7 +26,7 @@ namespace tabuleiro
             return pecas[pos.linha, pos.coluna];
         }
 
-        public void colorcarPeca(Peca p, Posicao pos)
+        public void colocarPeca(Peca p, Posicao pos)
         {
             if (existePeca(pos))
             {
@@ -34,7 +34,18 @@ namespace tabuleiro
             }
             pecas[pos.linha, pos.coluna] = p;
             p.posicao = pos;
+        }
 
+        public Peca retirarPeca(Posicao pos)
+        {
+            if (peca(pos) == null)
+            {
+                return null;
+            }
+            Peca aux = peca(pos);
+            aux.posicao = null;
+            pecas[pos.linha, pos.coluna] = null;
+            return aux;
         }
 
         public bool existePeca(Posicao pos)
