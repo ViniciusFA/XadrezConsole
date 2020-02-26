@@ -27,7 +27,7 @@ namespace xadrez
             Posicao pos = new Posicao(0, 0);
 
             //esquerda
-            pos.definirValores(pos.linha, pos.coluna - 1);
+            pos.definirValores(posicao.linha, posicao.coluna - 1);
             while (tab.posicaoValida(pos) && podeMover(pos))
             {
                 mat[pos.linha, pos.coluna] = true;
@@ -39,7 +39,7 @@ namespace xadrez
             }
 
             //direita
-            pos.definirValores(pos.linha, pos.coluna + 1);
+            pos.definirValores(posicao.linha, posicao.coluna + 1);
             while (tab.posicaoValida(pos) && podeMover(pos))
             {
                 mat[pos.linha, pos.coluna] = true;
@@ -51,7 +51,7 @@ namespace xadrez
             }
 
             //acima
-            pos.definirValores(pos.linha - 1, pos.coluna);
+            pos.definirValores(posicao.linha - 1, posicao.coluna);
             while (tab.posicaoValida(pos) && podeMover(pos))
             {
                 mat[pos.linha, pos.coluna] = true;
@@ -63,7 +63,7 @@ namespace xadrez
             }
 
             //abaixo
-            pos.definirValores(pos.linha + 1, pos.coluna);
+            pos.definirValores(posicao.linha + 1, posicao.coluna);
             while (tab.posicaoValida(pos) && podeMover(pos))
             {
                 mat[pos.linha, pos.coluna] = true;
@@ -75,7 +75,7 @@ namespace xadrez
             }
 
             //NO
-            pos.definirValores(pos.linha - 1, pos.coluna - 1);
+            pos.definirValores(posicao.linha - 1, posicao.coluna - 1);
             while (tab.posicaoValida(pos) && podeMover(pos))
             {
                 mat[pos.linha, pos.coluna] = true;
@@ -87,7 +87,7 @@ namespace xadrez
             }
 
             //NE
-            pos.definirValores(pos.linha - 1, pos.coluna + 1);
+            pos.definirValores(posicao.linha - 1, posicao.coluna + 1);
             while (tab.posicaoValida(pos) && podeMover(pos))
             {
                 mat[pos.linha, pos.coluna] = true;
@@ -99,7 +99,7 @@ namespace xadrez
             }
 
             //SE
-            pos.definirValores(pos.linha + 1, pos.coluna + 1);
+            pos.definirValores(posicao.linha + 1, posicao.coluna + 1);
             while (tab.posicaoValida(pos) && podeMover(pos))
             {
                 mat[pos.linha, pos.coluna] = true;
@@ -111,7 +111,7 @@ namespace xadrez
             }
 
             //SO
-            pos.definirValores(pos.linha + 1, pos.coluna - 1);
+            pos.definirValores(posicao.linha + 1, posicao.coluna - 1);
             while (tab.posicaoValida(pos) && podeMover(pos))
             {
                 mat[pos.linha, pos.coluna] = true;
